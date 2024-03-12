@@ -12,27 +12,26 @@ import time
 
 current_directory = os.getcwd()
 directory = current_directory + "/ERA5_download_scripts"
+sys.path.append(current_directory)# 添加ERA5download.py的路径
 os.chdir(directory)
 
-sys.path.append(current_directory)# 设置为ERA5download.py的路径
-os.chdir(directory)
+file_type = "*.py"
+scripts = glob.glob(f"{file_type}")# 获取工作路径中的所有py文件名
 
-file_type = "*.py"  # 查找所有.py文件
-
-# 获取工作路径中的所有py文件名
-scripts = glob.glob(f"{file_type}")
-print(scripts)
+for script in scripts:
+    print(script + '--ready!')
 
 processes = [subprocess.Popen(['python', script]) for script in scripts]
 
 time.sleep(1)
 
-# 等待所有进程完成
+## 等待所有进程完成 ##
 for p in processes:
     print(f"{p}_ongoing")
     p.wait()
     print(f"{p}_succeed")
 
+## debug代码 ##
 # processes = []
 # for script in scripts:
 #     print(f"Running script: {script}")
