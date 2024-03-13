@@ -19,5 +19,6 @@
  下载的数据文件会放置在..\ERA5_download_scripts\download文件夹中。
  
  ## 注意 ##
- CDS API key需自己导入\n
- ERA5_Land数据为逐年逐月下载其它数据均为逐年下载
+ CDS API key需自己导入;
+ 
+ ERA5_Land数据为逐年逐月下载其它数据均为逐年下载;
