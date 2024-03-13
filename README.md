@@ -3,6 +3,7 @@
 
  首先根据需要修改Script_create.py中的kind和variable_list参数 例如ERA5_Land数据就将kind设置为land（唯一），下载两米温度就在variable_list中添加2m_temperature参数（可添加多个），
  然后根据需要修改ERA5download.py中的参数。
+ 
  product_type_parameter,
  format_parameter,
  month_parameter,
