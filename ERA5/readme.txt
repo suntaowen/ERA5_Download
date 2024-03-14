@@ -2,6 +2,4 @@
 
 脚本建立完成之后运行Scripts_run.py执行即可
 
-注意：需要更改ERA5download.py\Scripts_create.py\Scripts_run.py中的路径
-
-下载的文件会放置在E:\ERA5\ERA5_download_scripts\download文件夹中
+下载的文件会放置在..\ERA5_download_scripts\download文件夹中
