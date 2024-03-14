@@ -16,13 +16,13 @@ os.chdir(directory)
 
 ## 以下三种参数需要设置 ##
 
-kind = 'pressurelevels' #例 kind = 'land'  'singlelevels' 'pressurelevels'只能选一个
+kind = 'singlelevels' #例 kind = 'land'  'singlelevels' 'pressurelevels'只能选一个
 
 #例 variable_list = ["2m_temperature", "forecast_albedo", "surface_pressure"] ['total_column_ozone', 'total_column_water_vapour']
-variable_list = ['relative_humidity']#选择自己所需要下载的参数，可选多个下载
+variable_list = ['total_column_ozone']#选择自己所需要下载的参数，可选多个下载
 
-start_year = 1983
-end_year = 1985
+start_year = 1981
+end_year = 1983
 
 ## 删除曾经的.py文件 ##
 file_type = "*.py"
