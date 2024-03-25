@@ -26,22 +26,22 @@ processes = [subprocess.Popen(['python', script]) for script in scripts]
 time.sleep(1)
 
 ## 等待所有进程完成 ##
-# for p in processes:
-#     print(f"{p}_ongoing")
-#     p.wait()
-#     print(f"{p}_succeed")
+ for p in processes:
+     print(f"{p}_ongoing")
+     p.wait()
+     print(f"{p}_succeed")
 
 ## debug代码 ##
-processes = []
-for script in scripts:
-    print(f"Running script: {script}")
-    proc = subprocess.Popen(['python', script], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    processes.append(proc)
+# processes = []
+# for script in scripts:
+#     print(f"Running script: {script}")
+#     proc = subprocess.Popen(['python', script], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+#     processes.append(proc)
 
-for p in processes:
-    stdout, stderr = p.communicate()
+# for p in processes:
+#     stdout, stderr = p.communicate()
 
-    if stdout:
-        print("succeed:", stdout.decode())
-    if stderr:
-        print("error:", stderr.decode())
+#     if stdout:
+#         print("succeed:", stdout.decode())
+#     if stderr:
+#         print("error:", stderr.decode())
